@@ -3,10 +3,29 @@ import java.util.Arrays;
 public class float_point_number {
     //这个类用来表示浮点数以及浮点数之间的一些操作（加减乘除以及一些辅助操作）
 
+    //浮点数数本身
     int[] number ;
+    public int[] getNumber() {
+        return number;
+    }
+
+    //浮点数的符号位
     int signBit ;
+    public int getSignBit(){
+        return signBit;
+    }
+
+    //浮点数的移码阶值
     int[] Bias_exponent;
+    public int[] getBias_exponent() {
+        return Bias_exponent;
+    }
+
+    //浮点数的有效值
     int[] Fraction;
+    public int[] getFraction() {
+        return Fraction;
+    }
 
     //构造函数，顺带初始化
     public float_point_number(String origin){
@@ -36,9 +55,17 @@ public class float_point_number {
         }
     }
 
+
+
+
     //检查是否为0
     public boolean CheckZero(int[] a){
-        
+        for (int i = 1 ; i < a.length ; i ++){
+            if (a[i] == 1){
+                return false;
+            }
+        }
+        return true;
     }
 
 
@@ -189,6 +216,16 @@ public class float_point_number {
         return A;
     }
 
+    //逻辑右移，最左端补上0
+    public int[] RIGHTMOVE(int[] A){
+        for (int count = A.length - 1 ; count >= 1 ; count -- ){
+            A[count] = A[count - 1];
+        }
+        //算数右移，保持符号位不变
+        A[0] = 0;
+        return A;
+    }
+
     //左移方法，右端补上0
     public int[] LEFTMOVE(int[] a){
         int[] temp = new int[a.length];
@@ -229,6 +266,13 @@ public class float_point_number {
             temp[i] = a;
         }
         return temp;
+    }
+
+
+    public void PRINT(int[] a){
+        for (int i = 0 ; i < a.length ; i ++){
+            System.out.print(a[i]);
+        }
     }
 
 
