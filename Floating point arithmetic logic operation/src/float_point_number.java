@@ -70,6 +70,7 @@ public class float_point_number {
 
 
     //二进制补码的加法 这里默认两个相加的数位数都是相等的
+    //相加的话，要另外考虑overflow的情况
     public int[] binaryAddition(int[] a , int[] b){
         int carry = 0;
         int[] result = new int[a.length];
