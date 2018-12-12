@@ -47,6 +47,14 @@ class float_point_numberTest {
     }
 
     @Test
+    void YuanMaJianFatest(){
+        int[] a = {0,1,1,1};
+        int[] b = {1,0,0,1};
+        int[] result = {1,1,1,1,0};
+        assertArrayEquals(fpn0.YuanMaJianFa(a,b),result);
+    }
+
+    @Test
     void arithmetic_right_shift() {
         int[] a = {1,1,1,0,0,1};
         int[] b = {1,1,0,0,1,1};

@@ -190,6 +190,63 @@ public class ALU {
 
 
 
+    public String Multiply(String num1 ,String num2){
+        float_point_number N1 = new float_point_number(num1);
+        float_point_number N2 = new float_point_number(num2);
+        if (N1.CheckZero(N1.getNumber())){
+            return TurnArraysToString(N1.NEWINT(N1.getNumber().length , 0)).toString();
+        }
+        else if (N2.CheckZero(N2.getNumber())){
+            return TurnArraysToString(N1.NEWINT(N1.getNumber().length , 0)).toString();
+        }
+        else {
+            //阶值相加
+            int[] newBias_exponent = N1.binaryAddition(N1.getBias_exponent() , N2.getBias_exponent());
+            int[] O127 = {0,1,1,1,1,1,1,1};
+            int[] O1023 = {0,1,1,1,1,1,1,1,1,1,1};
+            int[] temp = N1.YuanMaJianFa(newBias_exponent,O127);
+            if (temp[0] == 0){
+                N1.Bias_exponent = N1.Intercept_array(temp,1,temp.length - 1);
+                //报告上溢
+                if (BiasOverflow(N1)){
+                    StringBuilder sb = new StringBuilder();
+                    sb.append(N1.getSignBit());
+                    for (int i = 0; i < N1.getBias_exponent().length ; i++){
+                        sb.append(1);
+                    }
+                    for (int i = 0 ; i < N1.getFraction().length ; i ++){
+                        sb.append(0);
+                    }
+                    return sb.toString();
+                }
+                else {
+                    M1 m1 = new M1();
+                    int[] p = {1};
+                    int[] a = N1.Combine(p,N1.getFraction());
+                    int[] b = N2.Combine(a,N2.getFraction());
+                    int[] tempValue = m1.calculate(a,b);
+                    //然后对这个进行移位处理.
+                    /*
+                    *
+                    *
+                    *
+                    *
+                    *
+                    *
+                     */
+                    return null;
+                }
+            }
+            else {
+                //报告下溢
+                System.out.println("出现下溢");
+                return null;
+            }
+        }
+    }
+
+
+
 
 
 

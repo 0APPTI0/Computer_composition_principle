@@ -63,7 +63,15 @@ public class float_point_number {
     }
 
 
-
+    //最后得到的是一个多一位的补码表示
+    public int[] YuanMaJianFa(int[] x, int[] y){
+        int[] zero = {0};
+        int[] x1 = Combine(zero,x);
+        int[] y1 = Combine(zero,y);
+        y1 = Complement_code(y1);
+        int[] result = binaryAddition(x1,y1);
+        return result;
+    }
 
     //检查是否为0
     public boolean CheckZero(int[] a){
@@ -182,7 +190,6 @@ public class float_point_number {
 
 
     //二进制的除法实现
-
     public int[] binaryDIVISION3(int[] quotient , int[] divisor) {
         //生成remainder
         int[] remainder = NEWINT(quotient.length , quotient[0]);
@@ -224,6 +231,7 @@ public class float_point_number {
         return Combine(remainder,quotient);
     }
 
+
     //阶值减一
     public int[] BiasBinusOne(int[] B){
         int[] Z = {0};
@@ -249,6 +257,7 @@ public class float_point_number {
         }
         return false;
     }
+
 
 
 
