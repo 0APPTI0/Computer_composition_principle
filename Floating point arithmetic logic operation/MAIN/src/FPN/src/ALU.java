@@ -1,13 +1,6 @@
 package FPN.src;
 
 public class ALU {
-    //这个类用来实现浮点数运算的逻辑
-    String number1;
-    String number2;
-    public ALU(String a , String b){
-        this.number1 = a;
-        this.number2 = b;
-    }
 
     //实现浮点数的加法
     //@param num1 被加数，String类型
@@ -178,8 +171,28 @@ public class ALU {
             return NumReturnString(LeftMoveFraction(N1));
         }
 
-        
+
     }
+
+
+    public String Sub(String num1,String num2){
+        StringBuilder sb = new StringBuilder(num2);
+        if (num2.charAt(0) == '0'){
+            sb.replace(0,1,"1");
+        }
+        else {
+            sb.replace(0,1,"0");
+        }
+
+        return Addition(num1,sb.toString());
+
+    }
+
+
+
+
+
+
 
 
 
