@@ -29,6 +29,11 @@ public class float_point_number {
         return Fraction;
     }
 
+    //记录是否进位的一个标记,用完之后需要还原
+    public boolean JingWei = false;
+
+    public boolean GuiGeHua = true;
+
     //构造函数，顺带初始化
     public float_point_number(String origin){
         char[] temp = origin.toCharArray();
@@ -70,9 +75,36 @@ public class float_point_number {
         return true;
     }
 
+    // （在移码中，如果指数要加127或者1023才是真正的指数）
+    public boolean Bias_exponent_Check_Zero(int[] a){
+        int[] Zero1 = {0,1,1,1,1,1,1,1};
+        int[] Zero2 = {0,1,1,1,1,1,1,1,1,1,1};
+        if (ArraysJudge(Zero1,a)){
+            return true;
+        }
+        else if (ArraysJudge(Zero2,a)){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
+    public boolean ArraysJudge(int[] a , int[] b){
+        if (a.length != b.length){
+            return false;
+        }
+        for (int i = 0 ; i < a.length ; i++){
+            if (a[i] != b[i]){
+                return false;
+            }
+        }
+        return true;
+    }
     //二进制补码的加法 这里默认两个相加的数位数都是相等的
     //相加的话，要另外考虑overflow的情况
+    //@param a,b,均为数组
+    //@return 不考虑最高位进位的结果
     public int[] binaryAddition(int[] a , int[] b){
         int carry = 0;
         int[] result = new int[a.length];
@@ -86,6 +118,9 @@ public class float_point_number {
                 result[count] = a[count] + b[count] + carry;
                 carry = 0;
             }
+        }
+        if (carry == 1){
+            this.JingWei = true;
         }
         return result;
     }
@@ -189,6 +224,34 @@ public class float_point_number {
         return Combine(remainder,quotient);
     }
 
+    //阶值减一
+    public int[] BiasBinusOne(int[] B){
+        int[] Z = {0};
+        int[] a = Combine(Z,B);
+        int[] One = NEWINT(a.length,0);
+        One[One.length]= 1;
+        return Intercept_array(binarySub(a,One),1,a.length - 1);
+    }
+
+    //比较两个数字的阶值（移码表示）的大小。这里的a和b都表示的是无符号二进制数。
+    //@param first number
+    //@param second number
+    //@result 如果第一个数比第二个大那么就返回true否则false;如果两个数一样大就返回false
+    public boolean Bias_exponent_Comparing(int[] a , int[] b){
+        for (int i = 0 ; i < a.length ; i ++){
+            if (a[i] == 1 && b[i] == 0){
+                return true;
+            }
+            else if (a[i] == 0 && b[i] == 1){
+                return false;
+            }
+            else continue;
+        }
+        return false;
+    }
+
+
+
     //比较两个数组表示的二进制数字的大小
     public boolean Comparing(int[] a , int[] b){
         if (a[0] == b[0]){
@@ -240,8 +303,17 @@ public class float_point_number {
     }
 
 
+    //取补码
+    public int[] Complement_code(int[] a){
+        for (int i = 0 ; i < a.length ; i++){
+            a[i] = 1 - a[i];
+        }
+        int[] temp = new int[a.length];
+        temp[temp.length - 1] = 1;
+        return binaryAddition(a,temp);
+    }
 
-    //截取数组的方法截取的时候包含起始位置的字符和结束位置的字符
+    //截取数组的方法,截取的时候包含起始位置的字符和结束位置的字符
     public int[] Intercept_array(int[] a , int x , int y){
         int[] temp = new int[y - x + 1];
         for (int i = 0 ; i < (y - x + 1) ; i ++){
@@ -262,11 +334,11 @@ public class float_point_number {
         return temp;
     }
 
-    //初始化一个全部为0的数组
-    public int[] NEWINT(int length , int a){
+    //初始化一个全部为0或者1的数组
+    public int[] NEWINT(int length , int content){
         int[] temp = new int[length];
         for (int i = 0 ; i < length ; i ++){
-            temp[i] = a;
+            temp[i] = content;
         }
         return temp;
     }

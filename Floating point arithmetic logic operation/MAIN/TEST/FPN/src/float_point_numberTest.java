@@ -10,70 +10,83 @@ class float_point_numberTest {
     float_point_number fpn0 = new float_point_number("000000000000000000000000000000000");
 
     @Test
-    void checkZero() {
+    void checkZerotest() {
+        int[] a = fpn0.NEWINT(32,0);
+        int[] b = a;
+        b[0] = 1;
+        assertEquals(true,fpn0.CheckZero(a));
+        assertEquals(true,fpn0.CheckZero(b));
     }
 
     @Test
-    void binaryAddition() {
+    void binaryAdditiontest() {
     }
 
     @Test
-    void binarySub() {
+    void binarySubtest() {
     }
 
     @Test
-    void binaryMultiplication() {
+    void binaryMultiplicationtest() {
     }
 
     @Test
-    void binaryDIVISION3() {
+    void binaryDIVISION3test() {
     }
 
     @Test
-    void comparing() {
+    void Bias_exponent_Comparingtest(){
+        int[] a = {1,0,0,0,0,0,1,1};
+        int[] b = {0,1,1,1,1,1,1,1};
+        assertEquals(true,fpn0.Bias_exponent_Comparing(a,b));
+    }
+
+
+    @Test
+    void comparingtest() {
     }
 
     @Test
     void arithmetic_right_shift() {
+        int[] a = {1,1,1,0,0,1};
+        int[] b = {1,1,0,0,1,1};
+        assertArrayEquals(a,fpn0.Arithmetic_right_shift(b));
     }
 
     @Test
-    void RIGHTMOVE() {
+    void RIGHTMOVEtest() {
+        int[] a = {0,1,1,0,0,1};
+        int[] b = {1,1,0,0,1,1};
+        assertArrayEquals(a,fpn0.RIGHTMOVE(b));
     }
 
     @Test
-    void LEFTMOVE() {
+    void LEFTMOVEtest() {
+        int[] b = {1,1,0,0,1,1};
+        int[] a = {1,0,0,1,1,0};
+        assertArrayEquals(a,fpn0.LEFTMOVE(b));
     }
 
     @Test
-    void intercept_array() {
+    void intercept_arraytest() {
         int[] a = {1,2,3,4,5,6};
         int[] b = {1,2};
-        assertEquals(true,JudegArray(fpn0.Intercept_array(a,0,1),b));
-
+        assertArrayEquals(fpn0.Intercept_array(a,0,1),b);
     }
 
     @Test
-    void combine() {
+    void combinetest() {
+        int[] a = {1,2,3,4,5,6};
+        int[] b = {1,2};
+        int[] c = {3,4,5,6};
+        assertArrayEquals(a,fpn0.Combine(b,c));
     }
 
     @Test
-    void NEWINT() {
+    void NEWINTtest() {
+        int[] a = {1,1,1,1,1};
+        assertArrayEquals(a,fpn0.NEWINT(5,1));
     }
 
 
-    //判断两个数组是否相等的方法
-    public boolean JudegArray(int[] a , int[] b){
-        if (a.length != b.length){
-            return false;
-        }
-        else {
-            for (int i = 0 ; i < a.length ; i ++){
-                if (a[i] != b[i]){
-                    return false;
-                }
-            }
-            return true;
-        }
-    }
 }
