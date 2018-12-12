@@ -1,3 +1,5 @@
+package FPN.src;
+
 import java.util.Arrays;
 
 public class float_point_number {
@@ -239,11 +241,11 @@ public class float_point_number {
 
 
 
-    //截取数组的方法
+    //截取数组的方法截取的时候包含起始位置的字符和结束位置的字符
     public int[] Intercept_array(int[] a , int x , int y){
         int[] temp = new int[y - x + 1];
         for (int i = 0 ; i < (y - x + 1) ; i ++){
-            temp[i] = temp[i + x];
+            temp[i] = a[i + x];
         }
         return temp;
     }

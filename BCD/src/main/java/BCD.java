@@ -1,8 +1,10 @@
+
 public class BCD {
 
 
     Number num1 = new Number("111");
     Number num2 = new Number("111");
+
 
     public Number ADDITION(Number a1, Number a2){
         return a1.ADD(a1,a2);
