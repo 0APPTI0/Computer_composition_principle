@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "BCD",
+                "projectName": "BCD",
+                "workingDirectory": "/Users/appti/Downloads/学习相关/大二上/Computer_composition_principle/BCD",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "BCD",
+                "projectName": "BCD",
+                "workingDirectory": "/Users/appti/Downloads/学习相关/大二上/Computer_composition_principle/BCD",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
