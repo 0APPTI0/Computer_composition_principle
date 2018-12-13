@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Number {
 
     int defaultLength = 10;
