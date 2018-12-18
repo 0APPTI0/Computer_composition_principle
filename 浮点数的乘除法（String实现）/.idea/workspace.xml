@@ -18,12 +18,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/float_point_number_cal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1268">
-              <caret line="198" column="11" selection-start-line="198" selection-start-column="11" selection-end-line="198" selection-end-column="11" />
+            <state relative-caret-position="192">
+              <caret line="275" column="35" lean-forward="true" selection-start-line="275" selection-start-column="35" selection-end-line="275" selection-end-column="35" />
               <folding>
                 <element signature="e#374#405#1" />
+                <element signature="e#1310#1385#1" />
+                <element signature="e#1919#2062#1" />
+                <element signature="e#2076#2150#1" />
+                <element signature="e#2913#2950#1" />
                 <element signature="method#firstOne#0;class#float_point_number_cal#0" />
                 <element signature="method#Add#0;class#float_point_number_cal#0" />
+                <element signature="e#4618#4619#0" expanded="true" />
+                <element signature="method#Sub#0;class#float_point_number_cal#0" />
+                <element signature="e#4700#4701#0" expanded="true" />
                 <element signature="method#reverse#0;class#float_point_number_cal#0" />
                 <element signature="method#MakeOffset#0;class#float_point_number_cal#0" />
                 <element signature="method#MakeZero#0;class#float_point_number_cal#0" />
@@ -32,9 +39,12 @@
                 <element signature="method#MakeAllOne#0;class#float_point_number_cal#0" />
                 <element signature="method#isAllZero#0;class#float_point_number_cal#0" />
                 <element signature="method#isAllZero#1;class#float_point_number_cal#0" />
+                <element signature="e#1764#1765#0" expanded="true" />
+                <element signature="e#1820#1821#0" expanded="true" />
                 <element signature="e#2629#2630#0" expanded="true" />
                 <element signature="e#2683#2684#0" expanded="true" />
                 <element signature="method#Ing_Mul#0;class#float_point_number_cal#0" />
+                <element signature="method#Compare#0;class#float_point_number_cal#0" />
               </folding>
             </state>
           </provider>
@@ -43,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/com/float_point_number_calTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="49" column="26" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
+            <state relative-caret-position="375">
+              <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
               <folding>
                 <element signature="e#224#225#0" expanded="true" />
                 <element signature="e#282#283#0" expanded="true" />
@@ -55,7 +65,8 @@
                 <element signature="e#579#580#0" expanded="true" />
                 <element signature="e#629#630#0" expanded="true" />
                 <element signature="e#841#842#0" expanded="true" />
-                <element signature="e#882#883#0" expanded="true" />
+                <element signature="e#899#900#0" expanded="true" />
+                <element signature="e#961#962#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,7 +145,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545137726429" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545147769066" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -165,7 +176,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.float_point_number_calTest.makeLastOne">
+  <component name="RunManager" selected="JUnit.float_point_number_calTest.ing_Del">
+    <configuration name="float_point_number_calTest.ing_Del" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="浮点数的乘除法（String实现）" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com" />
+      <option name="MAIN_CLASS_NAME" value="com.float_point_number_calTest" />
+      <option name="METHOD_NAME" value="ing_Del" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="float_point_number_calTest.ing_Mul" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="浮点数的乘除法（String实现）" />
       <extension name="coverage">
@@ -214,22 +241,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="float_point_number_calTest.reverse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="浮点数的乘除法（String实现）" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.float_point_number_calTest" />
-      <option name="METHOD_NAME" value="reverse" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="float_point_number_calTest.sub" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="浮点数的乘除法（String实现）" />
       <extension name="coverage">
@@ -248,11 +259,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.float_point_number_calTest.ing_Del" />
         <item itemvalue="JUnit.float_point_number_calTest.makeLastOne" />
         <item itemvalue="JUnit.float_point_number_calTest.ing_Mul" />
         <item itemvalue="JUnit.float_point_number_calTest.sub" />
         <item itemvalue="JUnit.float_point_number_calTest.makeOne" />
-        <item itemvalue="JUnit.float_point_number_calTest.reverse" />
       </list>
     </recent_temporary>
   </component>
@@ -269,44 +280,52 @@
       <workItem from="1545044864437" duration="4062000" />
       <workItem from="1545049706363" duration="196000" />
       <workItem from="1545049925047" duration="2148000" />
-      <workItem from="1545122466659" duration="5706000" />
+      <workItem from="1545122466659" duration="10257000" />
     </task>
+    <task id="LOCAL-00001" summary="实现了乘法">
+      <created>1545137741688</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1545137741688</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="float_point_number_calTest_reverse - 2018.12.17 at 21h 00m 44s.xml">
-      <configuration name="float_point_number_calTest.reverse" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="float_point_number_calTest_reverse - 2018.12.17 at 21h 00m 58s.xml">
-      <configuration name="float_point_number_calTest.reverse" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="float_point_number_calTest_sub - 2018.12.17 at 21h 01m 01s.xml">
-      <configuration name="float_point_number_calTest.sub" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="float_point_number_calTest_makeOne - 2018.12.17 at 21h 01m 40s.xml">
-      <configuration name="float_point_number_calTest.makeOne" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="float_point_number_calTest_makeOne - 2018.12.17 at 21h 01m 52s.xml">
-      <configuration name="float_point_number_calTest.makeOne" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="float_point_number_calTest_sub - 2018.12.17 at 21h 01m 57s.xml">
-      <configuration name="float_point_number_calTest.sub" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="float_point_number_calTest_ing_Mul - 2018.12.18 at 16h 57m 29s.xml">
-      <configuration name="float_point_number_calTest.ing_Mul" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="float_point_number_calTest_ing_Mul - 2018.12.18 at 16h 59m 26s.xml">
-      <configuration name="float_point_number_calTest.ing_Mul" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="float_point_number_calTest_makeLastOne - 2018.12.18 at 20h 44m 11s.xml">
       <configuration name="float_point_number_calTest.makeLastOne" configurationId="JUnit" />
     </history-entry>
     <history-entry file="float_point_number_calTest_makeLastOne - 2018.12.18 at 20h 44m 20s.xml">
       <configuration name="float_point_number_calTest.makeLastOne" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="float_point_number_calTest_ing_Del - 2018.12.18 at 23h 35m 24s.xml">
+      <configuration name="float_point_number_calTest.ing_Del" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="float_point_number_calTest_ing_Del - 2018.12.18 at 23h 35m 49s.xml">
+      <configuration name="float_point_number_calTest.ing_Del" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="float_point_number_calTest_ing_Del - 2018.12.18 at 23h 36m 49s.xml">
+      <configuration name="float_point_number_calTest.ing_Del" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="float_point_number_calTest_ing_Del - 2018.12.18 at 23h 38m 25s.xml">
+      <configuration name="float_point_number_calTest.ing_Del" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="float_point_number_calTest_ing_Del - 2018.12.18 at 23h 39m 30s.xml">
+      <configuration name="float_point_number_calTest.ing_Del" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="float_point_number_calTest_ing_Del - 2018.12.18 at 23h 41m 06s.xml">
+      <configuration name="float_point_number_calTest.ing_Del" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="float_point_number_calTest_ing_Del - 2018.12.18 at 23h 41m 39s.xml">
+      <configuration name="float_point_number_calTest.ing_Del" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="float_point_number_calTest_ing_Del - 2018.12.18 at 23h 42m 37s.xml">
+      <configuration name="float_point_number_calTest.ing_Del" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12112000" />
+    <option name="totallyTimeSpent" value="16663000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -346,11 +365,15 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="实现了乘法" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现了乘法" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Test/com/float_point_number_calTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="49" column="26" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
+        <state relative-caret-position="375">
+          <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
           <folding>
             <element signature="e#224#225#0" expanded="true" />
             <element signature="e#282#283#0" expanded="true" />
@@ -361,19 +384,27 @@
             <element signature="e#579#580#0" expanded="true" />
             <element signature="e#629#630#0" expanded="true" />
             <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#899#900#0" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/float_point_number_cal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1268">
-          <caret line="198" column="11" selection-start-line="198" selection-start-column="11" selection-end-line="198" selection-end-column="11" />
+        <state relative-caret-position="192">
+          <caret line="275" column="35" lean-forward="true" selection-start-line="275" selection-start-column="35" selection-end-line="275" selection-end-column="35" />
           <folding>
             <element signature="e#374#405#1" />
+            <element signature="e#1310#1385#1" />
+            <element signature="e#1919#2062#1" />
+            <element signature="e#2076#2150#1" />
+            <element signature="e#2913#2950#1" />
             <element signature="method#firstOne#0;class#float_point_number_cal#0" />
             <element signature="method#Add#0;class#float_point_number_cal#0" />
+            <element signature="e#4618#4619#0" expanded="true" />
+            <element signature="method#Sub#0;class#float_point_number_cal#0" />
+            <element signature="e#4700#4701#0" expanded="true" />
             <element signature="method#reverse#0;class#float_point_number_cal#0" />
             <element signature="method#MakeOffset#0;class#float_point_number_cal#0" />
             <element signature="method#MakeZero#0;class#float_point_number_cal#0" />
@@ -382,9 +413,12 @@
             <element signature="method#MakeAllOne#0;class#float_point_number_cal#0" />
             <element signature="method#isAllZero#0;class#float_point_number_cal#0" />
             <element signature="method#isAllZero#1;class#float_point_number_cal#0" />
+            <element signature="e#1764#1765#0" expanded="true" />
+            <element signature="e#1820#1821#0" expanded="true" />
             <element signature="e#2629#2630#0" expanded="true" />
             <element signature="e#2683#2684#0" expanded="true" />
             <element signature="method#Ing_Mul#0;class#float_point_number_cal#0" />
+            <element signature="method#Compare#0;class#float_point_number_cal#0" />
           </folding>
         </state>
       </provider>

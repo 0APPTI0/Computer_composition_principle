@@ -5,22 +5,24 @@ public class float_point_number_cal {
     private int Size_of_Expo = 8;
     private int Size_of_Base = 23;
     public String Multiply(String number1 , String number2){
-        String symbol_of_num1 = String.valueOf(number1.charAt(0));
-        String symbol_of_num2 = String.valueOf(number2.charAt(0));
+        String symbol_of_num1;
+        symbol_of_num1 = String.valueOf(number1.charAt(0));
+        String symbol_of_num2;
+        symbol_of_num2 = String.valueOf(number2.charAt(0));
         String symbol;
         if (symbol_of_num1.equals(symbol_of_num2)){
             symbol = "0";
         }
         else symbol = "1";
 
-        String Expo1 = number1.substring(1,Size_of_Base);
+        String Expo1;
+        Expo1 = number1.substring(1,Size_of_Base);
         String Expo2 = number2.substring(1,Size_of_Base);
         String Expo = Add(MakeOffset(Size_of_Expo),Sub(Expo1,Expo2))[1];
 
         String real_Base1 = "01" + number1.substring(Size_of_Base);
         String real_Base2 = "01" + number2.substring(Size_of_Base);
         String Base = new String();
-
 
         if (Expo.equals(MakeAllOne(Expo.length()))){
             System.out.println("发生了阶值上溢");
@@ -68,8 +70,34 @@ public class float_point_number_cal {
             return symbol + Expo + Base;
         }
 
+    }
 
+    public String Div(String number1 , String number2){
+        String symbol_of_num1 = String.valueOf(number1.charAt(0));
+        String symbol_of_num2 = String.valueOf(number2.charAt(0));
+        String symbol;
+        if (symbol_of_num1.equals(symbol_of_num2)){
+            symbol = "0";
+        }
+        else symbol = "1";
 
+        String Expo1 = number1.substring(1,Size_of_Base);
+        String Expo2 = number2.substring(1,Size_of_Base);
+        String Expo = Sub(Add(Expo1,Expo2)[1],MakeOffset(Size_of_Expo));
+
+        String real_Base1 = "01" + number1.substring(Size_of_Base);
+        String real_Base2 = "01" + number2.substring(Size_of_Base);
+        String Base = new String();
+        if (Expo.equals(MakeAllOne(Expo.length()))){
+            System.out.println("发生了阶值上溢");
+            return symbol + Expo + MakeOffset(Size_of_Base);
+        }
+        if (Expo.equals(MakeZero(Size_of_Expo))){
+            System.out.println("发生了阶值下溢");
+            return symbol + Expo + MakeZero(Size_of_Base);
+        }
+
+        return null;
 
     }
 
@@ -84,7 +112,7 @@ public class float_point_number_cal {
     }
 
     //@return String[] , result[0]存放加法是否产生进位，result[1]存放运算结果
-    private String[] Add(String num1 , String num2){
+    public String[] Add(String num1, String num2){
         String result = "";
         int carry = 0;
         for (int i = num1.length() - 1 ; i >= 0 ; i --){
@@ -101,12 +129,12 @@ public class float_point_number_cal {
         return R;
     }
 
-    private String Sub(String num1 , String num2){
+    public String Sub(String num1, String num2){
         return Add(num1 , Add(reverse(num2),MakeOne(num2.length()))[1])[1];
     }
 
     //将字符串取反
-    private String reverse(String a){
+    public String reverse(String a){
         String result = "";
         for (int i = a.length() - 1 ; i >= 0 ; i --){
             int temp = 1 - (a.charAt(i) - '0');
@@ -134,7 +162,7 @@ public class float_point_number_cal {
     }
 
     //造出 "0000000000001"
-    private String MakeOne(int i){
+    public String MakeOne(int i){
         String result = "";
         for (int a = 0 ; a < i - 1 ; a ++){
             result = "0" + result;
@@ -144,7 +172,7 @@ public class float_point_number_cal {
     }
 
     //造出"00000000000001"
-    private String MakeLastOne(int i){
+    public String MakeLastOne(int i){
         String result = "1";
         for (int a = 0 ; a < i - 1 ; a ++){
             result = "0" + result;
@@ -183,7 +211,7 @@ public class float_point_number_cal {
 
     //左移字符串
     private String LeftMove (String a){
-        return a.substring(0,a.length() - 1)+"0";
+        return a.substring(1)+"0";
     }
 
     //算数右移字符串,左边直接添加1
@@ -192,11 +220,11 @@ public class float_point_number_cal {
     }
 
     //逻辑右移字符串（左边直接添加0
-    private String RightMove(String a){
+    public String RightMove(String a){
         return ("0" + a).substring(0,a.length());
     }
 
-    private String Ing_Mul(String num1 , String num2){
+    public String Ing_Mul(String num1, String num2){
         String A = MakeOne(num1.length()).substring(0,num1.length() - 1) + "0";
         String temp = "";
         String C = "0";
@@ -222,6 +250,60 @@ public class float_point_number_cal {
             num1 = temp.substring(A.length());
         }
         return temp;
+    }
+
+    public String Ing_Del(String num1 , String num2){
+        /*
+        •通过在前面添加n位符号来扩展被除数，并将其存储在余数和商寄存器中
+        •左移剩余部分和商，并判断余数是否足够大
+        •如果足够大，请执行加法或减法，并将商设置为1
+        •如果不够大，请将商设为0
+        •重复上述步骤
+        •如果被除数与除数有不同的符号，则用其补码替换商
+        •余数在余数寄存器中
+         */
+        String operateNumber;
+        if (num1.charAt(0) == '0') {
+            operateNumber= MakeZero(num1.length()) + num1;
+        }
+        else operateNumber = MakeAllOne(num1.length()) + num1;
+
+        for (int i = 0 ; i < num1.length() ; i ++){
+            operateNumber = LeftMove(operateNumber);
+
+            String ON1 = operateNumber.substring(0,num1.length());
+            String ON2 = operateNumber.substring(num1.length());
+            if (Compare(ON1,num2)){
+                if (ON1.charAt(0) == num2.charAt(0)){
+                    ON1 = Sub(ON1,num2);
+                }
+                else {
+                    ON1 = Add(ON1,num2)[1];
+                }
+                operateNumber = (ON1 + ON2).substring(0,operateNumber.length() - 1);
+                operateNumber = operateNumber+"1";
+
+            }
+        }
+
+        return operateNumber;
+    }
+
+    //二进制补码之间比较大小
+    private boolean Compare(String a , String b){
+        String temp;
+        if (a.charAt(0) == b.charAt(0)){
+            temp = Sub(a,b);
+            if (temp.charAt(0) == a.charAt(0))
+                return true;
+            else return false;
+        }
+        else {
+            temp = Add(a,b)[1];
+            if (temp.charAt(0) == a.charAt(0))
+                return true;
+            else return false;
+        }
     }
 
     public static void main(String[] args) {

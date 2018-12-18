@@ -49,4 +49,9 @@ class float_point_number_calTest {
     void makeLastOne() {
         assertEquals("00000001",f1.MakeLastOne(8));
     }
+
+    @Test
+    void ing_Del() {
+        assertEquals("11110010",f1.Ing_Del("1001","0011"));
+    }
 }
