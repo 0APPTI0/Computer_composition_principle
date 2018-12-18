@@ -44,4 +44,9 @@ class float_point_number_calTest {
     void rightMove() {
         assertEquals("0101",f1.RightMove("1010"));
     }
+
+    @Test
+    void makeLastOne() {
+        assertEquals("00000001",f1.MakeLastOne(8));
+    }
 }

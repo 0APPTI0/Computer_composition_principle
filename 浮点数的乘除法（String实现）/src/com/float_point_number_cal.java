@@ -2,8 +2,8 @@ package com;
 
 public class float_point_number_cal {
 
-    int Size_of_Expo = 8;
-    int Size_of_Base = 23;
+    private int Size_of_Expo = 8;
+    private int Size_of_Base = 23;
     public String Multiply(String number1 , String number2){
         String symbol_of_num1 = String.valueOf(number1.charAt(0));
         String symbol_of_num2 = String.valueOf(number2.charAt(0));
@@ -19,23 +19,72 @@ public class float_point_number_cal {
 
         String real_Base1 = "01" + number1.substring(Size_of_Base);
         String real_Base2 = "01" + number2.substring(Size_of_Base);
+        String Base = new String();
 
 
-        if (Expo.equals(MakeOffset(Expo.length()))){
+        if (Expo.equals(MakeAllOne(Expo.length()))){
             System.out.println("发生了阶值上溢");
-            return symbol + Expo + MakeOffset()
+            return symbol + Expo + MakeOffset(Size_of_Base);
+        }
+        if (Expo.equals(MakeZero(Size_of_Expo))){
+            System.out.println("发生了阶值下溢");
+            return symbol + Expo + MakeZero(Size_of_Base);
+        }
+
+        //小数点应该在第四位之后，按照这个规则来截取
+        String unHandledValue = Multiply(real_Base1,real_Base2);
+
+        int index = getFirstOne(unHandledValue);
+        //如果左边三位出现了"1"，就需要对这个值进行右移，直到最左边的1
+        if (index < 3){
+            //进行右移，直到这个数第四个char为"1"；随后指数要进行减一。
+            while(unHandledValue.charAt(3) != '1'){
+                unHandledValue = RightMove(unHandledValue);
+                Expo = Sub(Expo,MakeLastOne(Size_of_Expo));
+                if (Expo.equals(MakeZero(Size_of_Expo))){
+                    System.out.println("发生了阶值下溢");
+                    return symbol + Expo + MakeZero(Size_of_Base);
+                }
+            }
+            Base = unHandledValue.substring(4,4 + Size_of_Base);
+            return symbol + Expo + Base;
+        }
+        else if (index == 3){
+            //直接进行截取，然后返回
+            Base = unHandledValue.substring(4,4 + Size_of_Base);
+            return symbol + Expo + Base;
+        }
+        else {
+            //左移，直到这个数第四个char为"1"；随后指数要进行加一。
+            while (unHandledValue.charAt(3) != '1'){
+                unHandledValue = LeftMove(unHandledValue);
+                Expo = Add(Expo,MakeLastOne(Size_of_Expo))[1];
+                if (Expo.equals(MakeAllOne(Size_of_Expo))){
+                    System.out.println("发生了阶值上溢");
+                    return symbol + Expo + MakeOffset(Size_of_Base);
+                }
+            }
+            Base = unHandledValue.substring(4,4 + Size_of_Base);
+            return symbol + Expo + Base;
         }
 
 
 
 
-
-        return null;
     }
 
+    //返回一个字符串第一个"1"的位置
+    private int getFirstOne(String s){
+        for (int i = 0 ; i < s.length() ; i ++){
+            if (s.charAt(i) == '1'){
+                return i;
+            }
+        }
+        return 99;
+    }
 
     //@return String[] , result[0]存放加法是否产生进位，result[1]存放运算结果
-    public String[] Add(String num1 , String num2){
+    private String[] Add(String num1 , String num2){
         String result = "";
         int carry = 0;
         for (int i = num1.length() - 1 ; i >= 0 ; i --){
@@ -52,12 +101,12 @@ public class float_point_number_cal {
         return R;
     }
 
-    public String Sub(String num1 , String num2){
+    private String Sub(String num1 , String num2){
         return Add(num1 , Add(reverse(num2),MakeOne(num2.length()))[1])[1];
     }
 
     //将字符串取反
-    public String reverse(String a){
+    private String reverse(String a){
         String result = "";
         for (int i = a.length() - 1 ; i >= 0 ; i --){
             int temp = 1 - (a.charAt(i) - '0');
@@ -67,7 +116,7 @@ public class float_point_number_cal {
     }
 
     //造出"01111111"
-    public String MakeOffset(int length){
+    private String MakeOffset(int length){
         String result = "0";
         for (int i = 1 ; i <= length - 1 ; i ++){
             result = result + "1";
@@ -75,8 +124,17 @@ public class float_point_number_cal {
         return result;
     }
 
+    //造出"0000000000"
+    private String MakeZero(int a ){
+        String result = "";
+        for (int i = 0 ; i < a ; i ++){
+            result = "0" + result;
+        }
+        return result;
+    }
+
     //造出 "0000000000001"
-    public String MakeOne(int i){
+    private String MakeOne(int i){
         String result = "";
         for (int a = 0 ; a < i - 1 ; a ++){
             result = "0" + result;
@@ -85,8 +143,26 @@ public class float_point_number_cal {
         return result;
     }
 
+    //造出"00000000000001"
+    private String MakeLastOne(int i){
+        String result = "1";
+        for (int a = 0 ; a < i - 1 ; a ++){
+            result = "0" + result;
+        }
+        return result;
+    }
+
+    //造出"1111111111"
+    private String MakeAllOne(int a){
+        String result = "";
+        for (int i = 0 ; i < a ; i ++){
+            result = "1" + result;
+        }
+        return result;
+    }
+
     //判断字符串是否全是0
-    public boolean isAllZero(String s){
+    private boolean isAllZero(String s){
         for (int i = 0 ; i < s.length() ; i ++){
             if (s.charAt(i) == '1'){
                 return false;
@@ -96,7 +172,7 @@ public class float_point_number_cal {
     }
 
     //判断字符串是否全是1
-    public boolean isAllOne(String s){
+    private boolean isAllOne(String s){
         for (int i = 0 ; i < s.length() ; i ++){
             if (s.charAt(i) == '0'){
                 return false;
@@ -106,21 +182,21 @@ public class float_point_number_cal {
     }
 
     //左移字符串
-    public String LeftMove (String a){
+    private String LeftMove (String a){
         return a.substring(0,a.length() - 1)+"0";
     }
 
     //算数右移字符串,左边直接添加1
-    public String RightMove_with_1(String a){
+    private String RightMove_with_1(String a){
         return ("1"+a).substring(0,a.length());
     }
 
     //逻辑右移字符串（左边直接添加0
-    public String RightMove(String a){
+    private String RightMove(String a){
         return ("0" + a).substring(0,a.length());
     }
 
-    public String Ing_Mul(String num1 , String num2){
+    private String Ing_Mul(String num1 , String num2){
         String A = MakeOne(num1.length()).substring(0,num1.length() - 1) + "0";
         String temp = "";
         String C = "0";
