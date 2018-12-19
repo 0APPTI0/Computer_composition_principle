@@ -89,7 +89,7 @@ public class float_point_number_cal {
         String real_Base2 = "01" + number2.substring(Size_of_Base);
         String Base = new String();
         if (Expo.equals(MakeAllOne(Expo.length()))){
-            System.out.println("发生了阶值上溢");
+            System.out.println("发生了阶值上溢 ");
             return symbol + Expo + MakeOffset(Size_of_Base);
         }
         if (Expo.equals(MakeZero(Size_of_Expo))){
@@ -97,7 +97,16 @@ public class float_point_number_cal {
             return symbol + Expo + MakeZero(Size_of_Base);
         }
 
-        return null;
+        String unHandledValue = Ing_Del(real_Base1,real_Base2);
+        if (getFirstOne(unHandledValue) != 99) {
+            while (getFirstOne(unHandledValue) != real_Base1.length() - 1) {
+                unHandledValue = LeftMove(unHandledValue);
+            }
+        }
+
+        Base = unHandledValue.substring(real_Base1.length() , real_Base1.length() + Size_of_Base);
+
+        return symbol + Expo + Base;
 
     }
 
@@ -129,6 +138,7 @@ public class float_point_number_cal {
         return R;
     }
 
+    //阉割版除法实现，没有考虑除数或者被除数为0的情况（在浮点数有效值的除法中用不到
     public String Sub(String num1, String num2){
         return Add(num1 , Add(reverse(num2),MakeOne(num2.length()))[1])[1];
     }

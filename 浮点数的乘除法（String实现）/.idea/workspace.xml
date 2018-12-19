@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fbdfbc4-3433-4d26-883d-b5a786e0d15f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/exchange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/com/float_point_number_calTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/com/float_point_number_calTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/float_point_number_cal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/float_point_number_cal.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,19 +18,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/float_point_number_cal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="275" column="35" lean-forward="true" selection-start-line="275" selection-start-column="35" selection-end-line="275" selection-end-column="35" />
+            <state relative-caret-position="442">
+              <caret line="227" selection-start-line="227" selection-end-line="227" />
               <folding>
-                <element signature="e#374#405#1" />
-                <element signature="e#1310#1385#1" />
-                <element signature="e#1919#2062#1" />
-                <element signature="e#2076#2150#1" />
-                <element signature="e#2913#2950#1" />
-                <element signature="method#firstOne#0;class#float_point_number_cal#0" />
+                <element signature="method#Multiply#0;class#float_point_number_cal#0" />
+                <element signature="method#Div#0;class#float_point_number_cal#0" />
+                <element signature="method#getFirstOne#0;class#float_point_number_cal#0" />
                 <element signature="method#Add#0;class#float_point_number_cal#0" />
-                <element signature="e#4618#4619#0" expanded="true" />
-                <element signature="method#Sub#0;class#float_point_number_cal#0" />
-                <element signature="e#4700#4701#0" expanded="true" />
+                <element signature="e#4939#4940#0" expanded="true" />
+                <element signature="e#5021#5022#0" expanded="true" />
                 <element signature="method#reverse#0;class#float_point_number_cal#0" />
                 <element signature="method#MakeOffset#0;class#float_point_number_cal#0" />
                 <element signature="method#MakeZero#0;class#float_point_number_cal#0" />
@@ -38,13 +34,24 @@
                 <element signature="method#MakeLastOne#0;class#float_point_number_cal#0" />
                 <element signature="method#MakeAllOne#0;class#float_point_number_cal#0" />
                 <element signature="method#isAllZero#0;class#float_point_number_cal#0" />
-                <element signature="method#isAllZero#1;class#float_point_number_cal#0" />
-                <element signature="e#1764#1765#0" expanded="true" />
-                <element signature="e#1820#1821#0" expanded="true" />
-                <element signature="e#2629#2630#0" expanded="true" />
-                <element signature="e#2683#2684#0" expanded="true" />
+                <element signature="method#isAllOne#0;class#float_point_number_cal#0" />
                 <element signature="method#Ing_Mul#0;class#float_point_number_cal#0" />
+                <element signature="method#Ing_Del#0;class#float_point_number_cal#0" />
                 <element signature="method#Compare#0;class#float_point_number_cal#0" />
+                <element signature="method#main#0;class#float_point_number_cal#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/exchange.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+              <folding>
+                <element signature="e#205#206#0" expanded="true" />
+                <element signature="e#229#230#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/com/float_point_number_calTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+            <state relative-caret-position="622">
+              <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
               <folding>
                 <element signature="e#224#225#0" expanded="true" />
                 <element signature="e#282#283#0" expanded="true" />
@@ -66,7 +73,7 @@
                 <element signature="e#629#630#0" expanded="true" />
                 <element signature="e#841#842#0" expanded="true" />
                 <element signature="e#899#900#0" expanded="true" />
-                <element signature="e#961#962#0" expanded="true" />
+                <element signature="e#997#998#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,9 +84,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Arquillian JUnit Test Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -90,6 +97,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Test/com/float_point_number_calTest.java" />
+        <option value="$PROJECT_DIR$/src/com/exchange.java" />
         <option value="$PROJECT_DIR$/src/com/float_point_number_cal.java" />
       </list>
     </option>
@@ -112,7 +120,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -136,6 +143,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -145,7 +153,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545147777106" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545197002050" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -154,7 +162,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -280,7 +288,11 @@
       <workItem from="1545044864437" duration="4062000" />
       <workItem from="1545049706363" duration="196000" />
       <workItem from="1545049925047" duration="2148000" />
-      <workItem from="1545122466659" duration="10257000" />
+      <workItem from="1545122466659" duration="10368000" />
+      <workItem from="1545184321760" duration="219000" />
+      <workItem from="1545185218101" duration="472000" />
+      <workItem from="1545194989259" duration="20000" />
+      <workItem from="1545195026133" duration="1727000" />
     </task>
     <task id="LOCAL-00001" summary="实现了乘法">
       <created>1545137741688</created>
@@ -289,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545137741688</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="实现了二进制补码整数之间的除法">
+      <created>1545147804657</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1545147804657</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -325,13 +344,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16663000" />
+    <option name="totallyTimeSpent" value="19212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26037195" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2746781" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -340,7 +359,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32961586" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32961586" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39900866" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -367,13 +386,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="实现了乘法" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现了乘法" />
+    <MESSAGE value="实现了二进制补码整数之间的除法" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现了二进制补码整数之间的除法" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Test/com/float_point_number_calTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+        <state relative-caret-position="622">
+          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
           <folding>
             <element signature="e#224#225#0" expanded="true" />
             <element signature="e#282#283#0" expanded="true" />
@@ -385,26 +405,33 @@
             <element signature="e#629#630#0" expanded="true" />
             <element signature="e#841#842#0" expanded="true" />
             <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#961#962#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/exchange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <element signature="e#205#206#0" expanded="true" />
+            <element signature="e#229#230#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/float_point_number_cal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="275" column="35" lean-forward="true" selection-start-line="275" selection-start-column="35" selection-end-line="275" selection-end-column="35" />
+        <state relative-caret-position="442">
+          <caret line="227" selection-start-line="227" selection-end-line="227" />
           <folding>
-            <element signature="e#374#405#1" />
-            <element signature="e#1310#1385#1" />
-            <element signature="e#1919#2062#1" />
-            <element signature="e#2076#2150#1" />
-            <element signature="e#2913#2950#1" />
-            <element signature="method#firstOne#0;class#float_point_number_cal#0" />
+            <element signature="method#Multiply#0;class#float_point_number_cal#0" />
+            <element signature="method#Div#0;class#float_point_number_cal#0" />
+            <element signature="method#getFirstOne#0;class#float_point_number_cal#0" />
             <element signature="method#Add#0;class#float_point_number_cal#0" />
-            <element signature="e#4618#4619#0" expanded="true" />
-            <element signature="method#Sub#0;class#float_point_number_cal#0" />
-            <element signature="e#4700#4701#0" expanded="true" />
+            <element signature="e#4939#4940#0" expanded="true" />
+            <element signature="e#5021#5022#0" expanded="true" />
             <element signature="method#reverse#0;class#float_point_number_cal#0" />
             <element signature="method#MakeOffset#0;class#float_point_number_cal#0" />
             <element signature="method#MakeZero#0;class#float_point_number_cal#0" />
@@ -412,13 +439,11 @@
             <element signature="method#MakeLastOne#0;class#float_point_number_cal#0" />
             <element signature="method#MakeAllOne#0;class#float_point_number_cal#0" />
             <element signature="method#isAllZero#0;class#float_point_number_cal#0" />
-            <element signature="method#isAllZero#1;class#float_point_number_cal#0" />
-            <element signature="e#1764#1765#0" expanded="true" />
-            <element signature="e#1820#1821#0" expanded="true" />
-            <element signature="e#2629#2630#0" expanded="true" />
-            <element signature="e#2683#2684#0" expanded="true" />
+            <element signature="method#isAllOne#0;class#float_point_number_cal#0" />
             <element signature="method#Ing_Mul#0;class#float_point_number_cal#0" />
+            <element signature="method#Ing_Del#0;class#float_point_number_cal#0" />
             <element signature="method#Compare#0;class#float_point_number_cal#0" />
+            <element signature="method#main#0;class#float_point_number_cal#0" />
           </folding>
         </state>
       </provider>
