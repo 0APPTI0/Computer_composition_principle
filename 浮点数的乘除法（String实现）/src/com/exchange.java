@@ -55,7 +55,9 @@ public class exchange {
 
     //把小数部分转成二进制
     public String dToStr(double d){
-        if(d-(int)d<0.01) return "" + (int)d;
+        if(d-(int)d<0.000000001) {
+            return "" + (int)d;
+        }
         int n = (int)(d * 2);
         double a = d * 2 - n;
         return "" + n + dToStr(a);
