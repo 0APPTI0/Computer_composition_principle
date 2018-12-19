@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fbdfbc4-3433-4d26-883d-b5a786e0d15f" name="Default Changelist" comment="完成了浮点数与小数的转换实现">
-      <change beforePath="$PROJECT_DIR$/Test/com/exchangeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/com/exchangeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/exchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/exchange.java" afterDir="false" />
-    </list>
+    <list default="true" id="4fbdfbc4-3433-4d26-883d-b5a786e0d15f" name="Default Changelist" comment="完成了浮点数与小数的转换实现" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/float_point_number_cal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="201" column="16" selection-start-line="201" selection-start-column="16" selection-end-line="201" selection-end-column="16" />
+            <state relative-caret-position="285">
+              <caret line="145" column="12" lean-forward="true" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
               <folding>
                 <element signature="method#Multiply#0;class#float_point_number_cal#0" />
                 <element signature="method#Div#0;class#float_point_number_cal#0" />
@@ -44,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/exchange.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="121" column="37" lean-forward="true" selection-start-line="121" selection-start-column="37" selection-end-line="121" selection-end-column="37" />
+            <state relative-caret-position="225">
+              <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
               <folding>
                 <element signature="method#strToDou#0;class#exchange#0" />
                 <element signature="method#sToInt#0;class#exchange#0" />
@@ -59,17 +56,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/com/exchangeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+            <state relative-caret-position="401">
+              <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
               <folding>
                 <element signature="e#379#380#0" expanded="true" />
                 <element signature="e#409#410#0" expanded="true" />
                 <element signature="e#498#499#0" expanded="true" />
                 <element signature="e#560#561#0" expanded="true" />
-                <element signature="e#611#612#0" expanded="true" />
                 <element signature="e#641#642#0" expanded="true" />
               </folding>
             </state>
@@ -156,7 +152,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545215756317" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545216265310" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -297,7 +293,7 @@
       <workItem from="1545194989259" duration="20000" />
       <workItem from="1545195026133" duration="4661000" />
       <workItem from="1545204032588" duration="167000" />
-      <workItem from="1545206414023" duration="5734000" />
+      <workItem from="1545206414023" duration="6373000" />
     </task>
     <task id="LOCAL-00001" summary="实现了乘法">
       <created>1545137741688</created>
@@ -324,15 +320,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="exchangeTest_math_Exchange - 2018.12.19 at 17h 20m 22s.xml">
-      <configuration name="exchangeTest.math_Exchange" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="exchangeTest_math_Exchange - 2018.12.19 at 17h 21m 47s.xml">
-      <configuration name="exchangeTest.math_Exchange" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="exchangeTest_math_Exchange - 2018.12.19 at 17h 22m 30s.xml">
-      <configuration name="exchangeTest.math_Exchange" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="exchangeTest_math_Exchange - 2018.12.19 at 17h 23m 41s.xml">
       <configuration name="exchangeTest.math_Exchange" configurationId="JUnit" />
     </history-entry>
@@ -354,9 +341,18 @@
     <history-entry file="exchangeTest_math_Loop - 2018.12.19 at 18h 01m 11s.xml">
       <configuration name="exchangeTest.math_Loop" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="exchangeTest_math_Loop - 2018.12.19 at 18h 35m 24s.xml">
+      <configuration name="exchangeTest.math_Loop" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="exchangeTest_math_Loop - 2018.12.19 at 18h 35m 51s.xml">
+      <configuration name="exchangeTest.math_Loop" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="exchangeTest_math_Loop - 2018.12.19 at 18h 35m 58s.xml">
+      <configuration name="exchangeTest.math_Loop" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28047000" />
+    <option name="totallyTimeSpent" value="28686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -371,7 +367,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32961586" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32961586" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39900866" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -403,31 +399,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="完成了浮点数与小数的转换实现" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/float_point_number_cal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="201" column="16" selection-start-line="201" selection-start-column="16" selection-end-line="201" selection-end-column="16" />
-          <folding>
-            <element signature="method#Multiply#0;class#float_point_number_cal#0" />
-            <element signature="method#Div#0;class#float_point_number_cal#0" />
-            <element signature="method#getFirstOne#0;class#float_point_number_cal#0" />
-            <element signature="method#Add#0;class#float_point_number_cal#0" />
-            <element signature="method#reverse#0;class#float_point_number_cal#0" />
-            <element signature="method#MakeOffset#0;class#float_point_number_cal#0" />
-            <element signature="method#MakeZero#0;class#float_point_number_cal#0" />
-            <element signature="method#MakeOne#0;class#float_point_number_cal#0" />
-            <element signature="method#MakeLastOne#0;class#float_point_number_cal#0" />
-            <element signature="method#MakeAllOne#0;class#float_point_number_cal#0" />
-            <element signature="method#isAllZero#0;class#float_point_number_cal#0" />
-            <element signature="method#isAllOne#0;class#float_point_number_cal#0" />
-            <element signature="method#Ing_Mul#0;class#float_point_number_cal#0" />
-            <element signature="method#Ing_Del#0;class#float_point_number_cal#0" />
-            <element signature="method#Compare#0;class#float_point_number_cal#0" />
-            <element signature="method#main#0;class#float_point_number_cal#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/com/float_point_number_calTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
@@ -448,10 +419,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Test/com/exchangeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+          <folding>
+            <element signature="e#379#380#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/exchange.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="121" column="37" lean-forward="true" selection-start-line="121" selection-start-column="37" selection-end-line="121" selection-end-column="37" />
+        <state relative-caret-position="225">
+          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
           <folding>
             <element signature="method#strToDou#0;class#exchange#0" />
             <element signature="method#sToInt#0;class#exchange#0" />
@@ -464,17 +449,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/com/exchangeTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/float_point_number_cal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+        <state relative-caret-position="285">
+          <caret line="145" column="12" lean-forward="true" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
           <folding>
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
+            <element signature="method#Multiply#0;class#float_point_number_cal#0" />
+            <element signature="method#Div#0;class#float_point_number_cal#0" />
+            <element signature="method#getFirstOne#0;class#float_point_number_cal#0" />
+            <element signature="method#Add#0;class#float_point_number_cal#0" />
+            <element signature="method#reverse#0;class#float_point_number_cal#0" />
+            <element signature="method#MakeOffset#0;class#float_point_number_cal#0" />
+            <element signature="method#MakeZero#0;class#float_point_number_cal#0" />
+            <element signature="method#MakeOne#0;class#float_point_number_cal#0" />
+            <element signature="method#MakeLastOne#0;class#float_point_number_cal#0" />
+            <element signature="method#MakeAllOne#0;class#float_point_number_cal#0" />
+            <element signature="method#isAllZero#0;class#float_point_number_cal#0" />
+            <element signature="method#isAllOne#0;class#float_point_number_cal#0" />
+            <element signature="method#Ing_Mul#0;class#float_point_number_cal#0" />
+            <element signature="method#Ing_Del#0;class#float_point_number_cal#0" />
+            <element signature="method#Compare#0;class#float_point_number_cal#0" />
+            <element signature="method#main#0;class#float_point_number_cal#0" />
           </folding>
         </state>
       </provider>

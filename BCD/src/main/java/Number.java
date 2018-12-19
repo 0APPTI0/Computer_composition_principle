@@ -2,9 +2,9 @@ public class Number {
 
     int defaultLength = 10;
 
-    public String positive = "0000";
+    public String positive = "1100";
 
-    public String negative = "0001";
+    public String negative = "1101";
 
     //表示进位的符号，用完之后要手动设为false
     public boolean bitCarry = false;
@@ -40,34 +40,25 @@ public class Number {
 
     }
 
-    //加法，针对十进制的每一位
-    public String Addition(String a , String b){
-        char[] a1 = a.toCharArray();
-        char[] b1 = b.toCharArray();
-        int[] A = new int[a.length()];
-        int[] B = new int[b.length()];
-        for (int i = 0 ; i < a.length() ; i++){
-            A[i] = a1[i] - '0';
-            B[i] = b1[i] - '0';
+    //@return String[] , result[0]存放加法是否产生进位，result[1]存放运算结果
+    public String[] Addition(String num1, String num2){
+        String result = "";
+        int carry = 0;
+        for (int i = num1.length() - 1 ; i >= 0 ; i --){
+            int a = num1.charAt(i) - '0';
+            int b = num2.charAt(i) - '0';
+            int temp = a + b + carry;
+            carry = temp / 2;
+            temp = temp % 2;
+            result = temp + result;
         }
-
-        int JiLuJingWei = 0;
-        int[] result = new int[a.length()];
-        for (int count = a.length() - 1 ; count >=0 ; count --){
-            //三个中有两个1，产生了进位
-            if ((A[count] == 1 && B[count] == 1) || (A[count] == 1 && JiLuJingWei == 1) || (B[count] == 1 && JiLuJingWei == 1) ){
-                result[count] = A[count] + B[count] + JiLuJingWei - 2;
-                JiLuJingWei = 1;
-            }
-            else {
-                result[count] = A[count] + B[count] + JiLuJingWei;
-                JiLuJingWei = 0;
-            }
-        }
-        if (JiLuJingWei == 1){
+        String[] R = new String[2];
+        R[1] = result;
+        R[0] = String.valueOf(carry);
+        if (R[0]=="1"){
             this.bitCarry = true;
         }
-        return result.toString();
+        return R;
     }
 
     //减法,在reverse里面会用到
@@ -85,7 +76,7 @@ public class Number {
             }
             else C[i] = '1';
         }
-        return Addition(C.toString(),temp.toString());
+        return Addition(C.toString(),temp.toString())[1];
     }
 
 
@@ -95,11 +86,11 @@ public class Number {
         for (int i = a1.Absolute_value.length - 1 ; i >=0 ; i --){
             if (a1.bitCarry){
                 a1.bitCarry = false;
-                a1.Absolute_value[i] = a1.Addition(a1.Absolute_value[i],"0001");
-                a1.Absolute_value[i] = a1.Addition(a1.Absolute_value[i],a2.Absolute_value[i]);
+                a1.Absolute_value[i] = a1.Addition(a1.Absolute_value[i],"0001")[1];
+                a1.Absolute_value[i] = a1.Addition(a1.Absolute_value[i],a2.Absolute_value[i])[1];
             }
             else {
-                a1.Absolute_value[i] = a1.Addition(a1.Absolute_value[i],a2.Absolute_value[i]);
+                a1.Absolute_value[i] = a1.Addition(a1.Absolute_value[i],a2.Absolute_value[i])[1];
             }
         }
         return a1;
@@ -111,6 +102,7 @@ public class Number {
         for (int i = 0 ; i < n1.Absolute_value.length ; i++){
             n1.Absolute_value[i] = n1.Subtraction("1001",n1.Absolute_value[i]);
         }
+        //制造一个"0000001"
         Number zore = new Number("0");
         String[] temp = new String[n1.Absolute_value.length];
         for (int i = 0 ; i < temp.length - 1 ; i ++){
@@ -125,7 +117,7 @@ public class Number {
     //加6（"0110"）按位取反
     public Number Handle(Number a){
         for (int i = 0 ; i < a.Absolute_value.length - 1 ; i ++){
-            Absolute_value[i] = Addition(Absolute_value[i],"0110");
+            Absolute_value[i] = Addition(Absolute_value[i],"0110")[1];
             char[] temp = Absolute_value[i].toCharArray();
             for (char x:temp){
                 if (x == '0'){
