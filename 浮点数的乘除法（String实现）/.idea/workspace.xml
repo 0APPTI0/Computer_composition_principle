@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fbdfbc4-3433-4d26-883d-b5a786e0d15f" name="Default Changelist" comment="完成了浮点数与小数的转换实现" />
+    <list default="true" id="4fbdfbc4-3433-4d26-883d-b5a786e0d15f" name="Default Changelist" comment="完成了浮点数与小数的转换实现">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/float_point_number_cal.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="145" column="12" lean-forward="true" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
+              <caret line="145" column="12" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
               <folding>
                 <element signature="method#Multiply#0;class#float_point_number_cal#0" />
                 <element signature="method#Div#0;class#float_point_number_cal#0" />
@@ -42,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/exchange.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+              <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
               <folding>
                 <element signature="method#strToDou#0;class#exchange#0" />
                 <element signature="method#sToInt#0;class#exchange#0" />
@@ -59,14 +61,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/com/exchangeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+            <state relative-caret-position="585">
+              <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
               <folding>
-                <element signature="e#379#380#0" expanded="true" />
-                <element signature="e#409#410#0" expanded="true" />
                 <element signature="e#498#499#0" expanded="true" />
-                <element signature="e#560#561#0" expanded="true" />
-                <element signature="e#641#642#0" expanded="true" />
+                <element signature="e#576#577#0" expanded="true" />
+                <element signature="e#668#669#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,7 +115,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,6 +142,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -294,6 +294,8 @@
       <workItem from="1545195026133" duration="4661000" />
       <workItem from="1545204032588" duration="167000" />
       <workItem from="1545206414023" duration="6373000" />
+      <workItem from="1545234405629" duration="282000" />
+      <workItem from="1545319778456" duration="9000" />
     </task>
     <task id="LOCAL-00001" summary="实现了乘法">
       <created>1545137741688</created>
@@ -352,13 +354,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28686000" />
+    <option name="totallyTimeSpent" value="28977000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28183118" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28898427" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -419,40 +420,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/com/exchangeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
-          <folding>
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/exchange.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-          <folding>
-            <element signature="method#strToDou#0;class#exchange#0" />
-            <element signature="method#sToInt#0;class#exchange#0" />
-            <element signature="method#STOINT#0;class#exchange#0" />
-            <element signature="method#Math_Exchange#0;class#exchange#0" />
-            <element signature="method#douToStr#0;class#exchange#0" />
-            <element signature="method#intToStr#0;class#exchange#0" />
-            <element signature="method#dToStr#0;class#exchange#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/float_point_number_cal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="145" column="12" lean-forward="true" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
+          <caret line="145" column="12" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
           <folding>
             <element signature="method#Multiply#0;class#float_point_number_cal#0" />
             <element signature="method#Div#0;class#float_point_number_cal#0" />
@@ -470,6 +441,34 @@
             <element signature="method#Ing_Del#0;class#float_point_number_cal#0" />
             <element signature="method#Compare#0;class#float_point_number_cal#0" />
             <element signature="method#main#0;class#float_point_number_cal#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/exchange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding>
+            <element signature="method#strToDou#0;class#exchange#0" />
+            <element signature="method#sToInt#0;class#exchange#0" />
+            <element signature="method#STOINT#0;class#exchange#0" />
+            <element signature="method#Math_Exchange#0;class#exchange#0" />
+            <element signature="method#douToStr#0;class#exchange#0" />
+            <element signature="method#intToStr#0;class#exchange#0" />
+            <element signature="method#dToStr#0;class#exchange#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/com/exchangeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+          <folding>
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
           </folding>
         </state>
       </provider>
